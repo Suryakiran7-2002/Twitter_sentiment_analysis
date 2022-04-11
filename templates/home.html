@@ -1,0 +1,63 @@
+
+{%extends "template.html" %}
+{%block content%}
+
+
+<div class="container-fluid bk-img border-blue py-5">
+    <div class="row justify-content-center ">
+
+        <div class="col-12 text-center ">
+            <p class="font fs-2 text-dark">Enter a search query or #hashtag</p>
+        </div>
+
+            <div class="container font">
+                <form action="/" method="POST">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <input type="text" name="query" placeholder="Query">
+                        </div>
+
+                        <div class="col-12 text-center py-3">
+                            <button type="submit" class="btn bg-blue font">Show Results</button>
+                        </div>
+                    </div>
+                
+                </form>
+            </div>
+        
+        {% if query %}
+        <hr>
+        <div class="col-12 text-center">
+            <p class="font fs-4 text-dark">Showing top 300 results for the search query: {{query}}</p>
+        </div>
+
+        <div class="col-6 text-center">
+            <p class="font fs-2 text-success">The Number of Positive Tweets are {{pos}}</p>
+        </div>
+
+        <div class="col-6 text-center">
+            <p class="font fs-2 text-danger">The Number of Negative Tweets are {{neg}}</p>
+        </div>
+        
+        <div class="col-6 text-center">
+            {% for i in range(0,pl) %}
+                <p class="font fs-5 text-dark">{{pt[i]}}</p>
+                <hr>
+            {%endfor%}
+        </div>
+
+        <div class="col-6 text-center">
+            {% for i in range(0,nl) %}
+                <p class="font fs-5 text-dark">{{nt[i]}}</p>
+                <hr>
+            {%endfor%}
+        </div>
+        
+        {% endif %}
+        
+    </div>
+</div>
+
+
+  
+{% endblock %}

@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,500&display=swap');
+.logo{
+
+  height: 10em;
+}
+
+.bg-blue{
+
+  background-color: rgb(0, 163, 238);
+}
+
+.font{
+  font-family: 'Kanit', sans-serif;
+}
+
+
+
+.bk-img{
+  background-image: url('background.jpg');
+  /*background-position: center; /* Center the image */
+  /*background-repeat: no-repeat; /* Do not repeat the image */
+  /*background-size: cover; /* Resize the background image to cover the entire container */
+  
+  
+}
+
+.border-blue{
+  border-color: rgb(0, 163, 238);
+  border-style: dotted;
+  border-width: 2px;
+}
+
+.border-rounded{
+  border-radius: 5%;
+  
+}
+
+a{
+  text-decoration: none;
+  color: aliceblue;
+  transition: 300ms;
+}
+
+a:hover {
+  color: black;
+}
